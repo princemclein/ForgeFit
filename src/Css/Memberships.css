@@ -1,0 +1,230 @@
+/* Membership Section */
+.membership-section {
+  scroll-margin-top: 50px;
+  background: #0a0a0a;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2rem);
+  color: #f2ece6;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Header */
+.membership-header {
+  max-width: 640px;
+  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.membership-header p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #c74b3f;
+  margin: 0 0 0.75rem;
+}
+
+.membership-header h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.6rem, 5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  color: #f7f2ec;
+}
+
+.membership-header span {
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: #948b84;
+  padding: 0 0.5rem;
+}
+
+/* Grid */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .membership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.membership-card {
+  position: relative;
+  background: #0d0d0d;
+  border: 1px solid #1c1c1c;
+  border-left: 1px solid #262626;
+  border-radius: 4px;
+  padding: clamp(1.5rem, 4vw, 2rem) clamp(1.25rem, 3vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-4px);
+  background: #121212;
+  border-color: #2a2a2a;
+}
+
+.membership-card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #efe8e1;
+  margin: 0 0 1.25rem;
+  padding-right: 3.5rem;
+}
+
+.membership-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #1c1c1c;
+  flex-wrap: wrap;
+}
+
+.membership-price strong {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.7rem, 4vw, 2.1rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.membership-price span {
+  font-size: 0.9rem;
+  color: #8a827b;
+}
+
+.membership-card ul {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.membership-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #b3aaa2;
+  margin-bottom: 0.65rem;
+}
+
+.membership-card li span {
+  color: #d9584a;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.membership-card button {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  color: #f2ece6;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.membership-card button:hover {
+  background: #470000;
+  border-color: #470000;
+}
+
+/* Featured Card */
+.membership-card.featured {
+  background: #101010;
+  border-top: 1px solid #470000;
+  border-right: 1px solid #470000;
+  border-bottom: 1px solid #470000;
+  border-left: 1px solid #470000;
+}
+
+.membership-card.featured .membership-price strong {
+  color: #ff6a52;
+}
+
+.membership-card.featured button {
+  background: #c74b3f;
+  border-color: #c74b3f;
+  color: #0a0a0a;
+}
+
+.membership-card.featured button:hover {
+  background: #e05a4a;
+  border-color: #e05a4a;
+}
+
+/* Popular Badge */
+.popular-badge {
+  position: absolute;
+  top: 14px;
+  right: -34px;
+  transform: rotate(45deg);
+  background: #c74b3f;
+  color: #0a0a0a;
+  font-family: "Inter", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 2.5rem;
+  white-space: nowrap;
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .membership-card {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .popular-badge {
+    top: 12px;
+    right: -30px;
+    font-size: 0.55rem;
+    padding: 0.25rem 2.2rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .membership-card {
+    transition: none;
+  }
+}

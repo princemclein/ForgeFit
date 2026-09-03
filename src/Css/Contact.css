@@ -1,0 +1,209 @@
+/* Contact Section */
+#contact {
+  scroll-margin-top: 55px;
+  background: #0a0a0a;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2rem);
+  color: #f2ece6;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+#contact > div:first-of-type {
+  max-width: 640px;
+  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+}
+
+#contact > div:first-of-type > span {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #c74b3f;
+  margin: 0 0 0.75rem;
+}
+
+#contact > div:first-of-type > h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.6rem, 5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  color: #f7f2ec;
+}
+
+#contact > div:first-of-type > p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: #948b84;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+
+/* Layout: info + form */
+#contact > div:last-of-type {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (max-width: 800px) {
+  #contact > div:last-of-type {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Info Panel */
+#contact > div:last-of-type > div:first-child {
+  background: #0d0d0d;
+  border: 1px solid #1c1c1c;
+  border-left: 2px solid #470000;
+  border-radius: 4px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+#contact > div:last-of-type > div:first-child > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #efe8e1;
+  margin: 0 0 1.75rem;
+}
+
+#contact > div:last-of-type > div:first-child > div {
+  padding: 1.1rem 0;
+  border-top: 1px solid #1c1c1c;
+}
+
+#contact > div:last-of-type > div:first-child > div:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+#contact > div:last-of-type > div:first-child > div > strong {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c74b3f;
+  margin-bottom: 0.4rem;
+}
+
+#contact > div:last-of-type > div:first-child > div > p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b3aaa2;
+  margin: 0;
+}
+
+/* Form */
+#contact form {
+  background: #0d0d0d;
+  border: 1px solid #1c1c1c;
+  border-radius: 4px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+#contact form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#contact form label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #948b84;
+}
+
+#contact form input,
+#contact form textarea {
+  background: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  padding: 0.8rem 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #f2ece6;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #55504b;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #470000;
+  box-shadow: 0 0 0 3px rgba(71, 0, 0, 0.25);
+}
+
+#contact form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contact form button {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: #470000;
+  border: 1px solid #470000;
+  border-radius: 4px;
+  color: #f2ece6;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#contact form button:hover {
+  background: #c74b3f;
+  border-color: #c74b3f;
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+  #contact > div:last-of-type > div:first-child,
+  #contact form {
+    padding: 1.5rem;
+  }
+
+  #contact form button {
+    width: 100%;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  #contact form input,
+  #contact form textarea,
+  #contact form button {
+    transition: none;
+  }
+}

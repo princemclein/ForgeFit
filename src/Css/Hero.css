@@ -1,0 +1,268 @@
+#hero {
+  scroll-margin-top: 77px;
+  background-color: #0a0a0a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  min-height: 90vh;
+  padding: 0 6rem;
+  gap: 3rem;
+}
+
+.hero-left {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tag {
+  color: #c74b3f;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.hero-subtxt {
+  color: #d0d0d0;
+  max-width: 450px;
+  font-size: 1.1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: #470000;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6b0000;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #470000;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 600px;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ============================================
+   BREAKPOINT MAP (no overlaps, source-order safe)
+   Desktop:        1201px+        (base styles above)
+   Small laptop:   1025px – 1200px
+   Tablet:         723px  – 1024px
+     - Small tablet refinement: 723px – 900px
+   Mobile:         0px    – 722px
+   ============================================ */
+
+/* SMALL LAPTOP / LARGE TABLET */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #hero {
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-right img {
+    height: 500px;
+    max-width: 420px;
+  }
+}
+
+/* TABLET / IPAD */
+@media (min-width: 723px) and (max-width: 1024px) {
+  #hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 45vh;
+    padding: 0 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    box-sizing: border-box;
+  }
+
+  .hero-left {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .hero-left h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  .hero-tag {
+    font-size: 1rem;
+  }
+
+  .hero-subtxt {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 723px) and (max-width: 900px) {
+  #hero {
+    min-height: 600px;
+  }
+
+  .hero-left {
+    margin-left: 25px;
+  }
+
+  .hero-left h1 {
+    font-size: 47px;
+  }
+
+  .hero-subtxt {
+    max-width: 338px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 722px) {
+  #hero {
+    height: 788px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: unset;
+    min-height: unset;
+    padding: 1.5rem 1.25rem 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .hero-right {
+    order: -1;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-image-wrap {
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .hero-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .hero-tag {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-left h1 {
+    font-size: 45px;
+    line-height: 1.05;
+    max-width: 370px;
+  }
+
+  .hero-subtxt {
+    font-size: 16px;
+    max-width: 290px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.85rem;
+  }
+}
