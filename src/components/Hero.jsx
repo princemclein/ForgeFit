@@ -18,10 +18,7 @@ function Hero() {
 
       <div className="hero-right">
         <div className="hero-image-wrap">
-          <img
-            src={heroImg}
-            alt="Athlete training at 3K's Muscle Fitness Center"
-          />
+          <img src={heroImg} alt="Athlete training at ForgeFit" />
         </div>
       </div>
     </section>

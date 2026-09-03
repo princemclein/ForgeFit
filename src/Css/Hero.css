@@ -217,7 +217,6 @@
 
   .hero-image-wrap {
     width: 100%;
-    max-width: 320px;
     height: 420px;
     overflow: hidden;
     border-radius: 5px;

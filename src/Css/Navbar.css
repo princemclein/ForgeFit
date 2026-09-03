@@ -153,8 +153,8 @@ nav ul li a.active::after {
   }
 
   .header-logo img {
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 82px;
   }
 }
 
@@ -166,8 +166,8 @@ nav ul li a.active::after {
   }
 
   .header-logo img {
-    width: 55px;
-    height: 55px;
+    width: 130px;
+    height: 68px;
   }
 
   .header-name {
@@ -248,7 +248,7 @@ nav ul li a.active::after {
   }
 }
 
-/* PHONE ADJUSTMENTS */
+/* PHONE */
 @media (max-width: 768px) {
   nav {
     padding: 0 1.5rem;
@@ -256,8 +256,8 @@ nav ul li a.active::after {
   }
 
   .header-logo img {
-    width: 58px;
-    height: 58px;
+    width: 130px;
+    height: 78px;
   }
 
   .header-name {
@@ -265,15 +265,15 @@ nav ul li a.active::after {
   }
 }
 
-/* SMALL PHONE ADJUSTMENTS */
+/* SMALL PHONE */
 @media (max-width: 480px) {
   .header-name {
     font-size: 15.5px;
   }
 
   .header-logo img {
-    width: 58px;
-    height: 58px;
+    width: 130px;
+    height: 74px;
   }
 
   nav {

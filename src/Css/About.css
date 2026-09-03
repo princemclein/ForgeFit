@@ -290,16 +290,27 @@
 
   .cta-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
   }
 
   .cta-content h2,
-  .cta-content p,
-  .cta-content button {
+  .cta-content p {
     flex: 1 1 auto;
   }
 
-  .cta-content button {
+  .cta-action {
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    gap: 1rem;
+  }
+
+  .cta-content button {
+    width: auto;
+    padding: 0.9rem 2rem;
   }
 }
