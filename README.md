@@ -2,7 +2,7 @@
 
 A modern and responsive gym website concept showcasing gym memberships, an about section, and facilities.
 
-**Live:** [forge-fit-seven-ivory.vercel.app](https://forge-fit-seven-ivory.vercel.app)
+**Live:** https://forgefit-muscle-fitness-center.vercel.app/
 
 ## Tech Stack
 
