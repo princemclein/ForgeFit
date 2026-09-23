@@ -75,7 +75,7 @@ function MembershipForm({ selectedPlan, onClose }) {
     setStatus({ type: "idle", message: "" });
 
     window.alert(
-      "This is a demo form for preview purposes only. The submission is not connected to a live backend yet."
+      "This is a demo form for preview purposes only. The submission is not connected to a live backend yet.",
     );
 
     try {
