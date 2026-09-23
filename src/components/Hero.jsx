@@ -5,6 +5,18 @@ function Hero() {
   return (
     <section id="hero">
       <div className="hero-bg" aria-hidden="true" />
+      <div className="hero-icons" aria-hidden="true">
+        <div className="barbell-icon barbell-one">
+          <span className="barbell-bar" />
+          <span className="barbell-weight weight-left" />
+          <span className="barbell-weight weight-right" />
+        </div>
+        <div className="dumbbell-icon dumbbell-one">
+          <span className="dumbbell-handle" />
+          <span className="dumbbell-plate plate-left" />
+          <span className="dumbbell-plate plate-right" />
+        </div>
+      </div>
 
       <div className="hero-left">
         <p className="hero-tag">Forge your future</p>
