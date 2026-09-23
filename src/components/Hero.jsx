@@ -4,11 +4,18 @@ import heroImg from "../assets/hero-img.jpg";
 function Hero() {
   return (
     <section id="hero">
+      <div className="hero-bg" aria-hidden="true" />
+
       <div className="hero-left">
-        <p className="hero-tag">Go Beyond Limits</p>
-        <h1>Build Your Strongest Self</h1>
+        <p className="hero-tag">Forge your future</p>
+        <h1>
+          Train hard.
+          <br />
+          Rise stronger.
+        </h1>
         <p className="hero-subtxt">
-          Join ForgeFit and transform your body, one rep at a time.
+          Transform your routine with expert coaching, premium training spaces,
+          and a motivating community built to push your limits every day.
         </p>
         <div className="hero-buttons">
           <button className="btn-primary">Join Now</button>
@@ -24,4 +31,5 @@ function Hero() {
     </section>
   );
 }
+
 export default Hero;
