@@ -46,9 +46,8 @@ function About() {
           </p>
 
           <p>
-            Whether you're just starting your fitness journey or pushing for
-            your next PR, we're here to support and motivate you every step of
-            the way.
+            No matter where you are in your fitness journey, we’re here to
+            support and motivate you every step of the way.
           </p>
         </div>
 
