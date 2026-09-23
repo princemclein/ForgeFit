@@ -1,3 +1,5 @@
+import { useState } from "react";
+import MembershipModal from "./MembershipModal";
 import "../Css/Memberships.css";
 
 const memberships = [
@@ -47,50 +49,73 @@ const memberships = [
 ];
 
 function Memberships() {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (planName) => {
+    setSelectedPlan(planName);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedPlan(null);
+  };
+
   return (
-    <section id="memberships" className="membership-section">
-      <div className="membership-header">
-        <p>MEMBERSHIP PLANS</p>
-        <h2>Choose the Membership That Fits Your Goals</h2>
-        <span>
-          Flexible plans designed to keep you consistent, motivated, and
-          stronger every day.
-        </span>
-      </div>
+    <>
+      <section id="memberships" className="membership-section">
+        <div className="membership-header">
+          <p>MEMBERSHIP PLANS</p>
+          <h2>Choose the Membership That Fits Your Goals</h2>
+          <span>
+            Flexible plans designed to keep you consistent, motivated, and
+            stronger every day.
+          </span>
+        </div>
 
-      <div className="membership-grid">
-        {memberships.map((membership, index) => (
-          <div
-            className={`membership-card ${
-              membership.featured ? "featured" : ""
-            }`}
-            key={index}
-          >
-            {membership.featured && (
-              <div className="popular-badge">BEST VALUE</div>
-            )}
+        <div className="membership-grid">
+          {memberships.map((membership, index) => (
+            <div
+              className={`membership-card ${
+                membership.featured ? "featured" : ""
+              }`}
+              key={index}
+            >
+              {membership.featured && (
+                <div className="popular-badge">BEST VALUE</div>
+              )}
 
-            <h3>{membership.name}</h3>
+              <h3>{membership.name}</h3>
 
-            <div className="membership-price">
-              <strong>{membership.price}</strong>
-              <span>{membership.period}</span>
+              <div className="membership-price">
+                <strong>{membership.price}</strong>
+                <span>{membership.period}</span>
+              </div>
+
+              <ul>
+                {membership.features.map((feature, featureIndex) => (
+                  <li key={featureIndex}>
+                    <span>✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <button type="button" onClick={() => openModal(membership.name)}>
+                {membership.button}
+              </button>
             </div>
+          ))}
+        </div>
+      </section>
 
-            <ul>
-              {membership.features.map((feature, featureIndex) => (
-                <li key={featureIndex}>
-                  <span>✓</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-            <button>{membership.button}</button>
-          </div>
-        ))}
-      </div>
-    </section>
+      <MembershipModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        planName={selectedPlan || "Membership"}
+      />
+    </>
   );
 }
 
